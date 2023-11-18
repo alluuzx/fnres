@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\_tools\\fnres\\fnres\\fnres\\fnres.csproj": {}
+  },
+  "projects": {
+    "D:\\_tools\\fnres\\fnres\\fnres\\fnres.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\_tools\\fnres\\fnres\\fnres\\fnres.csproj",
+        "projectName": "fnres",
+        "projectPath": "D:\\_tools\\fnres\\fnres\\fnres\\fnres.csproj",
+        "packagesPath": "C:\\Users\\aleksi.KUUSIOKOLO\\.nuget\\packages\\",
+        "outputPath": "D:\\_tools\\fnres\\fnres\\fnres\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aleksi.KUUSIOKOLO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "ModernWpfUI": {
+              "target": "Package",
+              "version": "[0.9.6, )"
+            },
+            "ini-parser": {
+              "target": "Package",
+              "version": "[2.5.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
