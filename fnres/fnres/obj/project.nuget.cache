@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "A2qUvfUtahihaxJBIdm2LihCquaWELJ8IZg+K9DLOf4lvT3u2K+B+dN1wczTleYlRf0Z5N6IcCSnjkAtyYYiig==",
+  "success": true,
+  "projectFilePath": "D:\\_tools\\fnres\\fnres\\fnres.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aleksi.KUUSIOKOLO\\.nuget\\packages\\ini-parser\\2.5.2\\ini-parser.2.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,60 @@
+﻿<Window x:Class="fnres.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        mc:Ignorable="d"
+        Title="fnres" 
+        Height="350" Width="500"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        Loaded="Window_Loaded"
+        Closing="Window_Closing">
+
+    <Window.Resources>
+        <SolidColorBrush x:Name="MainForeground" x:Key="{x:Static SystemColors.ControlTextBrushKey}" Color="Black"/>
+    </Window.Resources>
+
+    <Border CornerRadius="20" Opacity=".99" Background="{DynamicResource MainBGBrush}" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid>
+            <Button Panel.ZIndex="10" ToolTip="Exit" Click="CloseButton_Click" Margin="0,15,15,0" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource TopbarBtn}" x:Name="CloseButton" FontFamily="Segoe Fluent Icons" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.RowSpan="2">
+                <Button.Content>
+                    <Label Content="&#xE711;" Foreground="White" Margin="1.4,1.3,0,0" FontSize="20"/>
+                </Button.Content>
+            </Button>
+
+            <Button Panel.ZIndex="10" ToolTip="Toggle theme" Click="ThemeButton_Click" Margin="0,15,65,0" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource TopbarBtn}" x:Name="ThemeButton" FontFamily="Segoe Fluent Icons" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.RowSpan="2">
+                <Button.Content>
+                    <Label x:Name="ThemeLabel" Content="&#xe790;" Foreground="White" Margin="1.4,1.3,0,0" FontSize="20"/>
+                </Button.Content>
+            </Button>
+
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="fnres" FontSize="18" FontFamily="Segoe UI Semibold" Margin="15,15,0,0" Grid.RowSpan="2"/>
+
+            <Label Margin="0,0,150,225" Content="Width" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox MaxLength="4" MaxLines="1" Text="1920" Margin="0,0,150,150" x:Name="WidthBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="125" Height="30"/>
+
+            <Label Margin="150,0,0,225" Content="Height" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox MaxLength="4" MaxLines="1" Text="1080" Margin="150,0,0,150" x:Name="HeightBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="125" Height="30"/>
+
+            <Label Content="Window Mode" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,65"/>
+            <ComboBox Style="{StaticResource theComboBox}" Background="{DynamicResource SecondaryBGBrush}" x:Name="ModeBox" SelectedIndex="0" Margin="0,15,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="269" BorderThickness="0">
+                <ComboBoxItem Content="Fullscreen"/>
+                <ComboBoxItem Content="Windowed Fullscreen"/>
+                <ComboBoxItem Content="Windowed"/>
+            </ComboBox>
+
+            <Label Margin="0,110,150,0" Content="FPS Limit" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox ToolTip="0 for no limit" MaxLength="5" MaxLines="1" Text="0" Margin="0,175,150,0" x:Name="FPSBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="125" Height="30"/>
+
+            <Label Margin="150,110,0,0" Content="Low Latency Mode" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ToggleButton Style="{StaticResource EnabledDisabledButton}" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="125" Height="30" Margin="150,175,0,0" x:Name="LowLatencyMode"/>
+
+            <Button Foreground="White" Style="{StaticResource NormalButton}" Height="35" BorderThickness="0" FontSize="14" ToolTip="Applies the settings and enables read-only" Click="ApplyButton_Click" x:Name="ApplyButton" Background="{StaticResource AccentBrush}" Content="Apply" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="240" Margin="0,0,0,18"/>
+        </Grid>
+    </Border>
+</Window>
